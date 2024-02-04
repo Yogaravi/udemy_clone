@@ -73,15 +73,24 @@ color: blueviolet;
  padding: 5px;  
  justify-content:space-between; 
  display: flex;
- border-bottom: solid black 1px;
+ border-radius: 30px;
  
 }
 .catogories p{
-    background-color: blueviolet;
+    background-color: purple;
     color: white;
     border-radius: 30px;
     padding: 10px;
+    cursor: pointer;
+    border: solid purple 1px;
 
+
+}
+.catogories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color:black;
+    border: solid purple 1px;
 }
 .sale-image{
     position: relative;
@@ -98,7 +107,23 @@ padding: 2%;
 position: absolute;
 top: 20%;
 left: 10%;
-    
+animation-name: zoom;   
+animation-duration: 2s; 
+opacity: 0;
+animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+
+    }
+
 }
 .recommented{
     padding: 10px;
